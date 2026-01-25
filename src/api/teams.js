@@ -1,4 +1,4 @@
-const API = "https://localhost:3000/api";
+const API = "http://localhost:3000/api";
 
 // fetch a list of all the teams
 export async function getTeams() {

@@ -72,7 +72,6 @@ export default function Players() {
               <div className="player-content">
                 <h3>{player.name}</h3>
                 <p className="player-bio">{player.bio}</p>
-                <p className="player-email">{player.email}</p>
               </div>
             </div>
           ))}
