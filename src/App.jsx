@@ -5,12 +5,13 @@ import Players from "./players/Players";
 import Login from "./auth/Login";
 import Register from "./auth/Register";
 import Error404 from "./Error404";
+import Home from "./Home";
 
 function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route index element={<h1>Welcome to Stranger Things Academy</h1>} />
+        <Route index element={<Home />} />
         <Route path="/teams" element={<Teams />} />
         <Route path="/players" element={<Players />} />
         <Route path="/account" element={<h1>Account</h1>} />

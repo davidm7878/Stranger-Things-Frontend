@@ -12,7 +12,7 @@ export default function Login() {
     const email = formData.get("email");
     const password = formData.get("password");
     try {
-      await login({ email, password });
+      await login({ username: email, password });
       navigate("/teams");
     } catch (e) {
       setError(e.message);

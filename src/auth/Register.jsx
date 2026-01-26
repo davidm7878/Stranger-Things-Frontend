@@ -8,13 +8,16 @@ export default function Register() {
 
   const [error, setError] = useState(null);
 
-  const onRegister = async (formData) => {
+  const onRegister = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
     const email = formData.get("email");
     const password = formData.get("password");
-    const firstname = formData.get("firstName");
-    const lastname = formData.get("lastName");
+    const firstName = formData.get("firstName");
+    const lastName = formData.get("lastName");
     try {
-      await register({ email, password, firstname, lastname });
+      // backend expects `username` and `password` — use email as username
+      await register({ username: email, password, firstName, lastName });
       navigate("/teams");
     } catch (e) {
       setError(e.message);
@@ -24,7 +27,7 @@ export default function Register() {
   return (
     <>
       <h1>Register for an account</h1>
-      <form action={onRegister}>
+      <form onSubmit={onRegister}>
         <label>
           First Name
           <input type="text" name="firstName" />

@@ -7,9 +7,10 @@ export default function Navbar() {
   return (
     <header id="navbar">
       <NavLink id="brand" to="/">
-        <p>Stranger Things Academy</p>
+        <p>Create Teams and play!</p>
       </NavLink>
       <nav>
+        <NavLink to="/">Home</NavLink>
         <NavLink to="/teams">Teams</NavLink>
         <NavLink to="/players">Players</NavLink>
         {token ? (

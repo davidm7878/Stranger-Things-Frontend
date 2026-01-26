@@ -32,6 +32,10 @@ export async function addTeam(teamData) {
       body: JSON.stringify(teamData),
     });
     const result = await response.json();
+    if (!response.ok) {
+      console.error("Add team error:", result);
+      throw new Error(result.error || "Failed to add team");
+    }
     return result;
   } catch (e) {
     console.error(e);

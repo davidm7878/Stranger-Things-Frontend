@@ -1,0 +1,15 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  font-family: inherit;
+}
+
+.home-title {
+  font-size: 2.2rem;
+  color: #e50914;
+  margin-bottom: 24px;
+  font-family: inherit;
+  letter-spacing: 1px;
+}
